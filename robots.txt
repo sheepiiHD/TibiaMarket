@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /staff
+Disallow: /pma000111
+Disallow: /js
+Disallow: /zohoverify
+Disallow: /php
+Disallow: /._-configurations._-
+Disallow: /css
+Disallow: /less
+Disallow: /img
+Disallow: /fonts

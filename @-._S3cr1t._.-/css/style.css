@@ -1,0 +1,206 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 11, 2017, 3:16:38 PM
+    Author     : Matt Sutton
+*/
+
+html, body {
+    height: 100%;
+    width: 100%
+}
+
+body{ 
+    margin: 0;
+    padding: 0;
+    font-family: cursive
+}
+* {
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px 25px 25px 25px;
+    max-width: 60%;
+    max-height: 80%;
+}
+.wrapper.container-fluid{
+    padding:0;
+}
+
+/** Inner table structure **/
+
+/** Left column **/
+.left-col{
+    width:240px;
+    border:1px solid black;
+    border-radius: 25px 0px 0px 25px;
+}
+.base{
+    background: #e3e3e3;
+    height: calc(100% - 67px);
+    border-radius: 0px 0px 0px 25px;
+}
+
+.user-icon-container{
+    height: 66px;
+    border-bottom: 1px solid black;
+    border-radius: 25px 0px 0px 0px;
+}
+
+.user-icon{
+    float:left;
+    height: 66px;
+    width: 65px;
+    border-right: 1px solid black;
+    border-radius: 24px 0px 0px 0px;
+   
+}
+.user-icon-container .description{
+    padding: 5px;
+}
+.user-icon-container .username{
+    font-size: 18px;
+    padding-left: 10px;
+    color:black;
+    font-weight: bolder;
+}
+.user-icon-container .title{
+    font-size:10px;
+    padding-left: 10px;
+}
+.left-col .nav-container{
+    border:5px solid lightsteelblue;
+    list-style-type: none;
+    padding: 0;
+}
+.left-col .nav-container li.nav-link{
+    position: relative;
+    border: 1px solid black;
+    padding: 10px 15px;
+    cursor: pointer;
+    -webkit-animation: fadein .1s;
+    animation: fadein .1s;
+    transition: all .3s;
+    background-color: #1b6d85;
+    color: white;
+}
+
+.left-col .nav-container li.nav-link:hover{
+    background: green;
+    color: white;
+}
+
+.left-col .nav-container li.nav-link:hover .sub-nav-container{
+    display:block;
+}
+.caret{
+    transition: all .1s ease-in-out;
+}
+.left-col .nav-container li.nav-link:hover .caret{
+    transform: rotate(-90deg);
+}
+
+.left-col .nav-container li.nav-link .sub-nav-container{
+    position: absolute;
+    display: none;
+    left:100%;
+    top:0;
+    min-width: 175px;
+    list-style-type: none;
+    padding: 0px;
+    background-color: darkslategrey;
+    color: white;
+    z-index: 99;
+}
+.left-col .nav-container li.nav-link .sub-nav-container li.nav-link{
+    background-color: darkslategrey;
+}
+.left-col .nav-container li.nav-link .sub-nav-container li.sub:hover{
+    background-color: green;
+}
+/** Right column **/
+.right-col {
+    width: calc(100% - 240px);
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 0px 25px 25px 0px;
+}
+.right-col .trigger-info .title{
+    margin: 5px;
+    font-weight: bold;
+}
+.right-col .trigger-info .content{
+    font-size: 12px;
+    margin: 5px;
+}
+.right-col .trigger-info .res{
+    border: 0 solid;
+    height: 900px;
+    margin-left: -95px;
+    margin-top: -90px;
+    width: 979px;
+    -webkit-transform:scale(0.8);
+    -moz-transform:scale(0.8);
+    -o-transform:scale(0.8);
+    -ms-transform:scale(0.8);
+    z-index: -1;
+}
+
+/** Projects **/
+.right-col .project{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.right-col .project .name{
+    margin-left: 10px
+}
+.right-col .project .desc{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.right-col .project .download{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+
+.hidden{
+    display: none;
+}
+.nothidden{
+    display:block;
+}
+
+
+
+/** Extra **/
+.flex{
+    display:flex;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-space-between{
+    justify-content: space-between;
+}
+
+/** animations **/
+fade-in{
+    -webkit-animation: fadein .7s;
+    animation: all .3s ease-in-out;
+}
+
+/** Key frames **/
+@keyframes fadein {
+    from { opacity: 0; background: white; color: white; }
+    to   { opacity: 1; background: darkslategray; color: white; }
+}
